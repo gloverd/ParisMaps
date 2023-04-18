@@ -1,5 +1,11 @@
 $(window).on('load', function() {
 
+      $('#toggleBtn').click(function() {
+        $('svg:has(foreignObject i[style="color: lightgrey;"])').toggle();
+        $(this).text('Toggled!');
+
+      });
+  
   var documentSettings = {};
   var group2color = {};
 
