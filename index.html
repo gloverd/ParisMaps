@@ -67,7 +67,7 @@
 < script type="text/javascript">
 $(document).ready(function() {
   $('#toggleBtn').click(function() {
-    $('svg foreignObject > i[style="color: lightgrey;"]').toggle();
+    $('svg:has(foreignObject i[style="color: lightgrey;"])'.toggle();
   });
 });
   </script>
