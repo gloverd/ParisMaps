@@ -779,8 +779,11 @@ $(window).on('load', function() {
         $('#map').append('<div class="div-center"></div>');
         $('.div-center').append('<div class="map-title leaflet-bar leaflet-control leaflet-control-custom">' + title + subtitle + '</div>');
       }
-
-      $('.map-title h3').click(function() { location.reload(); });
+          
+          //David Hack 04/25/2023 add in buttons
+       $('.div-center').append('<span><button id="toggleBtn">Hide/Show Visited Sites</button> <button id="toggleBtn2">Hide/Show Visited Sites</button></span>');
+          
+      //$('.map-title h3').click(function() { location.reload(); });
     }
   }
 
