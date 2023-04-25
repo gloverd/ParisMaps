@@ -772,17 +772,15 @@ $(window).on('load', function() {
     if (dispTitle !== 'off') {
       var title = '<h3 class="pointer">' + getSetting('_mapTitle') + '</h3>';
       var subtitle = '<h5>' + getSetting('_mapSubtitle') + '</h5>';
+          //David Hack 04/25/2023 add in buttons
+      var toggle_buttons = '<span><button id="toggleBtn">Hide/Show Visited Sites</button> <button id="toggleBtn2">Hide/Show Visited Sites</button></span>';
 
       if (dispTitle == 'topleft') {
-        $('div.leaflet-top').prepend('<div class="map-title leaflet-bar leaflet-control leaflet-control-custom">' + title + subtitle + '</div>');
+        $('div.leaflet-top').prepend('<div class="map-title leaflet-bar leaflet-control leaflet-control-custom">' + title + subtitle + toggle_buttons +'</div>');
       } else if (dispTitle == 'topcenter') {
         $('#map').append('<div class="div-center"></div>');
-        $('.div-center').append('<div class="map-title leaflet-bar leaflet-control leaflet-control-custom">' + title + subtitle + '</div>');
-      }
-          
-          //David Hack 04/25/2023 add in buttons
-       $('.div-center').append('<span><button id="toggleBtn">Hide/Show Visited Sites</button> <button id="toggleBtn2">Hide/Show Visited Sites</button></span>');
-          
+        $('.div-center').append('<div class="map-title leaflet-bar leaflet-control leaflet-control-custom">' + title + subtitle + toggle_buttons + '</div>');
+      }  
       //$('.map-title h3').click(function() { location.reload(); });
     }
   }
